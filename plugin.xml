@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.apache.cordova.patchTempCert"
+    version="0.1.0">
+    <name>Patch Temp Certificate</name>
+    <description>Cordova Patch Temp Certificate Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,windows</keywords>
+    <repo>https://github.com/purplecabbage/cordova-plugin-patch-temp-cert</repo>
+    <issue>https://github.com/purplecabbage/cordova-plugin-patch-temp-cert/issues</issue>
+
+    <!-- windows8 -->
+    <platform name="windows8">
+        <source-file src="src/windows/CordovaApp_TemporaryKey.pfx"  target-dir="../../"/>
+    </platform>
+
+    <!-- windows universal apps win8.1|win8.0|wp8.1 -->
+    <platform name="windows">
+        <source-file src="src/windows/CordovaApp_TemporaryKey.pfx"  target-dir="../../"/>
+    </platform>
+
+</plugin>
